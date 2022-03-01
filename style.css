@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color-1: hsl(220, 98%, 61%);
+    --primary-color-2: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+    --light-theme-color-1: hsl(0, 0%, 98%);
+    --light-theme-color-2: hsl(236, 33%, 92%);
+    --light-theme-color-3: hsl(233, 11%, 84%);
+    --light-theme-color-4: hsl(236, 9%, 61%);
+    --light-theme-color-5: hsl(235, 19%, 35%);
+
+    --dark-theme-color-1: hsl(235, 21%, 11%);
+    --dark-theme-color-2: hsl(235, 24%, 19%);
+    --dark-theme-color-3: hsl(234, 39%, 85%);
+    --dark-theme-color-4: hsl(236, 33%, 92%);
+    --dark-theme-color-5: hsl(234, 11%, 52%);
+    --dark-theme-color-6: hsl(233, 14%, 35%);
+    --dark-theme-color-7: hsl(237, 14%, 26%);
+
+    --font-size-18: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.bg-top {
+    height: 300px;
+    width: 100%;
+}
+.main {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 300px);
+    flex-direction: column;
+}
+.main .container {
+    width: 540px;
+    margin-top: -220px;
+}
+.main .main__logo {
+    display: flex;
+    justify-content: space-between;
+}
+.main__logo h1 {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+.main__logo .theme-icon {
+    transition: all 0.2s ease;
+}
+.main__logo .theme-icon:hover {
+    cursor: pointer;
+}
+.main__logo .theme-icon i {
+    font-size: 20px;
+}
+.main__input {
+    width: 100%;
+    margin-top: 48px;
+    position: relative;
+}
+.main__input input {
+    width: 100%;
+    height: 54px;
+    padding: 20px 70px;
+    font-size: var(--font-size-18);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+.main__input .circle {
+    position: absolute;
+    top: 30%;
+    left: 20px;
+}
+.main__list {
+    margin-top: 24px;
+    width: 100%;
+}
+.main__list .item-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.todo-item {
+    width: 100%;
+    height: 54px;
+    padding: 20px 70px;
+    position: relative;
+}
+.todo-item p {
+    font-size: var(--font-size-18);
+}
+.main__input .circle i {
+    font-size: 20px;
+    border-radius: 50%;
+}
+.todo-item .circle-tick {
+    position: absolute;
+    top: 30%;
+    left: 20px;
+}
+.todo-item .circle-tick i {
+    font-size: 22px;
+    border-radius: 50%;
+}
+.todo-item .icon-close {
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    padding: 4px;
+    transition: all 0.2s ease;
+}
+.todo-item .icon-close:hover {
+    cursor: pointer;
+}
+.todo-item .icon-close i {
+    font-size: 22px;
+}
+.footer-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: 54px;
+}
+.footer-list .stat {
+    width: 33%;
+}
+.stat {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.remind {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+.attribution {
+    margin-top: 40px;
+}
+.theme-icon i {
+    display: none;
+}
+.circle-tick:hover {
+    cursor: pointer;
+    border: 1px solid var(--primary-color-1);
+    border-radius: 50%;
+}
+
+
+/* dark theme */
+.dark-theme ::placeholder {
+    color: var(--dark-theme-color-6);
+}
+.dark-theme .theme-icon .fa-lightbulb {
+    display: block;
+}
+.dark-theme .bg-top {
+    background: url('./images/bg-desktop-dark.jpg');
+}
+.dark-theme .main {
+    background: var(--dark-theme-color-1);
+}
+.dark-theme .main__logo h1,
+.dark-theme .main__logo .theme-icon i {
+    color: var(--dark-theme-color-4);
+}
+.dark-theme .main__input input {
+    background: var(--dark-theme-color-2);
+    color: var(--dark-theme-color-3);
+}
+.dark-theme .main__input .circle i {
+    color: var(--dark-theme-color-2);
+    border: 1px solid var(--dark-theme-color-6);
+}
+.dark-theme .todo-item {
+    border-bottom: 1px solid var(--dark-theme-color-6);
+    background: var(--dark-theme-color-2);
+}
+.dark-theme .todo-item p {
+    color: var(--dark-theme-color-3);
+}
+.dark-theme .todo-item .icon-close i {
+    color: var(--dark-theme-color-6);
+}
+.dark-theme .todo-item .circle-tick i {
+    color: var(--dark-theme-color-2);
+    border: 1px solid var(--dark-theme-color-6);
+}
+.dark-theme .footer-list,
+.dark-theme .sup {
+    background: var(--dark-theme-color-2);
+    color: var(--dark-theme-color-6);
+}
+.todo-item .circle-tick div {
+    display: none;
+}
+
+/* light theme */
+.light-theme ::placeholder {
+    color: var(--light-theme-color-4);
+}
+.light-theme .theme-icon .fa-moon {
+    display: block;
+}
+.light-theme .bg-top {
+    background: url('./images/bg-desktop-light.jpg');
+}
+.light-theme .main {
+    background: var(--light-theme-color-1);
+}
+.light-theme .main__logo h1,
+.light-theme .main__logo .theme-icon i {
+    color: var(--light-theme-color-2);
+}
+.light-theme .main__input input {
+    background: var(--light-theme-color-2);
+    color: var(--light-theme-color-5);
+}
+.light-theme .main__input .circle i {
+    color: var(--light-theme-color-2);
+    border: 1px solid var(--light-theme-color-4);
+}
+.light-theme .todo-item {
+    border-bottom: 1px solid var(--light-theme-color-4);
+    background: var(--light-theme-color-2);
+}
+.light-theme .todo-item p {
+    color: var(--light-theme-color-5);
+}
+.light-theme .todo-item .icon-close i {
+    color: var(--light-theme-color-5);
+}
+.light-theme .todo-item .circle-tick i {
+    color: var(--light-theme-color-2);
+    border: 1px solid var(--light-theme-color-5);
+}
+.light-theme .footer-list,
+.light-theme .sup {
+    background: var(--light-theme-color-2);
+    color: var(--light-theme-color-5);
+}
+
+/* completed item */
+.completed .circle-tick>i{
+    display: none;
+}
+.completed .circle-tick div{
+    display: block;
+    background: var(--primary-color-2);
+    border-radius: 50%;
+} 
+.completed .circle-tick div i {
+    color: white;
+}
+.completed .todo-item__text {
+    text-decoration: line-through;
+}
+.light-theme .completed .todo-item__text {
+    color: var(--light-theme-color-4);
+}
+.dark-theme .completed .todo-item__text {
+    color: var(--dark-theme-color-7);
+}
+.stat li,
+.clear-completed {
+    transition: all 0.2s ease;
+}
+.stat li:hover,
+.clear-completed:hover {
+    cursor: pointer;
+    color: var(--primary-color-1);
+}
+.sup {
+    width: 100%;
+    height: 54px;
+    margin: 40px auto;
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .main .container {
+        width: 90%;
+        margin: -220px 5%;
+    }
+    .footer-list .stat {
+        visibility: hidden;
+        width: 0;
+    }
+    .sup {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .stat {
+        width: 100%;
+    }
+}
+
+
+
+
+
